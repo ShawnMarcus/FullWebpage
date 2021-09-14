@@ -213,5 +213,31 @@ footer {
     color: #fff;
     text-align: center;
     margin-top: 20px;
-    border-top: 3px solid #eb4442;
+    border-top: 4px solid #eb4442;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header .container, 
+    #newsletter .container, 
+    #boxes .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    #showcase .container {
+        padding-bottom: 50px;
+    }
+
+    /* this selector is very specific because we used the same selector specificity in previous CSS code */
+    #boxes .container .box {
+        width: 80%;
+    }
+
+    #about .container, 
+    #services .container {
+        grid-template-columns: 1fr;
+    }
 }
